@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APAR · Guía de estilos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --color-primary:#FF5A2C;
+  --color-primary-dark:#E04A1E;
+  --color-secondary:#2B3042;
+  --color-accent:#FDC62F;
+  --color-bg-light:#F5F5F5;
+  --color-white:#FFFFFF;
+  --color-text:#222222;
+  --color-text-muted:#6B6B6B;
+  --border:#E3E3E3;
+  --font-heading:'Rajdhani','Barlow Condensed',Arial Narrow,sans-serif;
+  --font-body:'Open Sans',Inter,Arial,sans-serif;
+  --container:1170px;
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:80px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font-body);font-size:15px;line-height:1.6;color:var(--color-text);background:var(--color-white)}
+.wrap{max-width:var(--container);margin:0 auto;padding:0 var(--s3)}
+h1,h2,h3{font-family:var(--font-heading);text-transform:uppercase;margin:0;line-height:1.1}
+a{color:var(--color-primary)}
+:focus-visible{outline:3px solid var(--color-accent);outline-offset:2px}
+
+/* Cabecera y navegación */
+header.top{background:var(--color-secondary);color:#fff}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--s2);padding-top:var(--s2);padding-bottom:var(--s2)}
+.brand{font-family:var(--font-heading);font-weight:700;font-size:30px;letter-spacing:2px}
+.brand span{color:var(--color-primary)}
+nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-left:var(--s3)}
+nav a:hover{color:var(--color-primary)}
+.hero{background:var(--color-secondary);color:#fff;padding:var(--s5) 0 var(--s6)}
+.hero h1{font-size:clamp(40px,7vw,64px);font-weight:700}
+.hero h1 em{font-style:normal;color:var(--color-primary)}
+.hero p{max-width:560px;color:#C9CCD6;margin:var(--s2) 0 var(--s3)}
+
+/* Secciones */
+section{padding:var(--s6) 0 0}
+section:last-of-type{padding-bottom:var(--s6)}
+.sec-title{text-align:center;margin-bottom:var(--s5)}
+.sec-title h2{font-size:32px;font-weight:700}
+.sec-title p{margin:var(--s1) 0 0;color:var(--color-text-muted)}
+.note{font-size:14px;color:var(--color-text-muted);max-width:70ch}
+.grid{display:grid;gap:var(--s3)}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card-box{border:1px solid var(--border);padding:var(--s3);background:#fff}
+.label{font-size:12px;font-weight:600;color:var(--color-text-muted)}
+
+/* Color */
+.swatch{border:1px solid var(--border)}
+.swatch .chip{height:96px}
+.swatch .info{padding:var(--s2)}
+.swatch strong{display:block;font-family:var(--font-heading);font-size:18px;text-transform:uppercase}
+.swatch code{font-size:13px}
+.swatch p{margin:4px 0 0;font-size:13px;color:var(--color-text-muted)}
+
+/* Tipografía */
+.type-row{display:flex;align-items:baseline;gap:var(--s3);padding:var(--s2) 0;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.type-row .meta{width:170px;flex:none;font-size:12px;color:var(--color-text-muted)}
+.t-h1{font-family:var(--font-heading);font-size:52px;font-weight:700;text-transform:uppercase;line-height:1}
+.t-h2{font-family:var(--font-heading);font-size:30px;font-weight:700;text-transform:uppercase}
+.t-h3{font-family:var(--font-heading);font-size:17px;font-weight:600;text-transform:uppercase}
+.t-body{font-size:15px}
+.t-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+
+/* Botones */
+.btn{display:inline-block;font-family:var(--font-body);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;padding:14px 28px;border:1px solid var(--color-primary);background:var(--color-primary);color:#fff;text-decoration:none;cursor:pointer;border-radius:0;transition:background .15s}
+.btn:hover{background:var(--color-primary-dark);border-color:var(--color-primary-dark)}
+.btn.ghost{background:transparent;color:var(--color-primary)}
+.btn.ghost:hover{background:var(--color-primary);color:#fff}
+.btn.light{background:transparent;color:#fff;border-color:#fff}
+.btn.light:hover{background:#fff;color:var(--color-secondary)}
+.btn[disabled]{background:#BDBDBD;border-color:#BDBDBD;cursor:not-allowed}
+.row{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center}
+.dark{background:var(--color-secondary);padding:var(--s3)}
+
+/* Producto */
+.product{background:#fff}
+.product .img{position:relative;background:var(--color-bg-light);height:190px;display:flex;align-items:center;justify-content:center;color:#BDBDBD;font-size:13px}
+.tag{position:absolute;top:10px;font-size:11px;font-weight:600;padding:2px 8px;color:#fff}
+.tag.sale{left:10px;background:var(--color-primary)}
+.tag.sold{right:10px;background:var(--color-secondary)}
+.product h3{margin-top:var(--s2);font-size:15px}
+.stars{color:var(--color-primary);letter-spacing:2px;font-size:13px}
+.price{font-size:14px;font-weight:600}
+.price s{color:var(--color-text-muted);font-weight:400;margin-right:6px}
+
+/* Menú */
+.menu{display:flex;background:var(--color-secondary);flex-wrap:wrap}
+.menu span{padding:14px 20px;color:#fff;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.menu span:first-child{background:var(--color-primary)}
+
+/* Formulario */
+.form-vehicle{border:1px solid var(--color-primary);padding:var(--s3);max-width:320px}
+.form-vehicle h3{font-size:24px;text-align:center;margin-bottom:var(--s2)}
+.form-vehicle select{width:100%;padding:12px;margin-bottom:var(--s1);border:1px solid var(--border);background:#fff;font-family:var(--font-body);font-size:14px;color:var(--color-text-muted)}
+.form-vehicle select:disabled{background:#C7C7C7}
+.form-vehicle .btn{width:100%;margin-top:var(--s1)}
+
+/* Ventajas */
+.perk{display:flex;gap:var(--s2);align-items:center}
+.perk svg{width:36px;height:36px;stroke:var(--color-primary);fill:none;stroke-width:1.5;flex:none}
+.perk strong{display:block;font-family:var(--font-heading);text-transform:uppercase;font-size:16px}
+.perk span{font-size:13px;color:var(--color-text-muted)}
+
+/* Cuenta atrás */
+.count{display:flex;gap:var(--s2)}
+.count div{text-align:center;color:#fff}
+.count b{display:block;width:64px;height:64px;line-height:62px;border:1px solid var(--color-primary);font-family:var(--font-heading);font-size:28px}
+.count span{font-size:11px;color:#C9CCD6}
+
+/* Blog */
+.blog .img{height:140px;background:#3B4157}
+.blog h3{margin:var(--s2) 0 6px;font-size:18px}
+.blog .meta{font-size:12px;color:var(--color-text-muted)}
+.blog a{font-size:12px;font-weight:600;text-transform:uppercase;text-decoration:none}
+
+/* Espaciado / tokens */
+.space{display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s1);font-size:13px}
+.space i{display:block;height:16px;background:var(--color-primary)}
+pre{background:var(--color-secondary);color:#E7E9EF;padding:var(--s3);overflow-x:auto;font-size:13px;line-height:1.5;margin:0}
+ul.clean{margin:0;padding-left:20px}
+ul.clean li{margin-bottom:6px}
+footer{background:var(--color-secondary);color:#C9CCD6;text-align:center;padding:var(--s4) 0;font-size:13px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">A<span>P</span>AR</div>
+    <nav aria-label="Secciones de la guía">
+      <a href="#color">Color</a>
+      <a href="#tipografia">Tipografía</a>
+      <a href="#layout">Layout</a>
+      <a href="#componentes">Componentes</a>
+      <a href="#tokens">Tokens</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Guía de estilos <em>APAR</em></h1>
+    <p>Sistema visual para la tienda online de autopartes nuevas y usadas: color, tipografía, espaciado y componentes.</p>
+    <a class="btn" href="#componentes">Ver componentes</a>
+  </div>
+</div>
+
+<main>
+
+<section id="color">
+  <div class="wrap">
+    <div class="sec-title"><h2>Color</h2><p>El naranja se reserva para acciones y elementos que deban destacar.</p></div>
+    <div class="grid g4">
+      <div class="swatch"><div class="chip" style="background:#FF5A2C"></div><div class="info"><strong>Primario</strong><code>#FF5A2C</code><p>Botones, enlaces, precios, etiquetas Sale.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#2B3042"></div><div class="info"><strong>Secundario</strong><code>#2B3042</code><p>Menú, pie de página, bandas de contacto.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#FDC62F"></div><div class="info"><strong>Acento</strong><code>#FDC62F</code><p>Solo promociones; nunca en botones.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#F5F5F5"></div><div class="info"><strong>Fondo claro</strong><code>#F5F5F5</code><p>Tarjetas de producto y fondos de sección.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#FFFFFF"></div><div class="info"><strong>Blanco</strong><code>#FFFFFF</code><p>Fondo general.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#222222"></div><div class="info"><strong>Texto</strong><code>#222222</code><p>Títulos y nombres de producto.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#6B6B6B"></div><div class="info"><strong>Texto secundario</strong><code>#6B6B6B</code><p>Descripciones y metadatos.</p></div></div>
+      <div class="swatch"><div class="chip" style="background:#E04A1E"></div><div class="info"><strong>Primario hover</strong><code>#E04A1E</code><p>Estado hover del naranja.</p></div></div>
+    </div>
+    <p class="note" style="margin-top:var(--s3)">Contraste: el texto blanco sobre naranja cumple para texto grande y botones en negrita; para texto pequeño sobre naranja, usar tamaño 14 px o más con peso 600. Sobre fondos grises, los enlaces van en oscuro o blanco, no en naranja.</p>
+  </div>
+</section>
+
+<section id="tipografia">
+  <div class="wrap">
+    <div class="sec-title"><h2>Tipografía</h2><p>Rajdhani para títulos, Open Sans para cuerpo e interfaz.</p></div>
+    <div class="card-box">
+      <div class="type-row"><div class="meta">H1 · 44-56 px · 700</div><div class="t-h1">Piezas para tu coche</div></div>
+      <div class="type-row"><div class="meta">H2 · 28-32 px · 700</div><div class="t-h2">Elige piezas por marca</div></div>
+      <div class="type-row"><div class="meta">H3 · 16-18 px · 600</div><div class="t-h3">Kit de servicio completo</div></div>
+      <div class="type-row"><div class="meta">Cuerpo · 14-15 px · 400</div><div class="t-body">Envío gratis desde 27 $. Todas las piezas son genuinas y tienes 365 días para devolverlas.</div></div>
+      <div class="type-row"><div class="meta">Etiqueta · 12-13 px · 600</div><div class="t-label">Añadir al carrito</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="layout">
+  <div class="wrap">
+    <div class="sec-title"><h2>Layout y espaciado</h2><p>Contenedor de 1170 px, cuadrícula de 12 columnas y escala de 8 px.</p></div>
+    <div class="grid g2">
+      <div class="card-box">
+        <h3 style="margin-bottom:var(--s2)">Escala de espaciado</h3>
+        <div class="space"><i style="width:8px"></i>8 px · --s1</div>
+        <div class="space"><i style="width:16px"></i>16 px · --s2</div>
+        <div class="space"><i style="width:24px"></i>24 px · --s3</div>
+        <div class="space"><i style="width:32px"></i>32 px · --s4</div>
+        <div class="space"><i style="width:48px"></i>48 px · --s5</div>
+        <div class="space"><i style="width:80px"></i>80 px · --s6</div>
+      </div>
+      <div class="card-box">
+        <h3 style="margin-bottom:var(--s2)">Principios</h3>
+        <ul class="clean">
+          <li>Secciones separadas por 60-80 px en vertical.</li>
+          <li>Títulos de sección centrados con subtítulo gris.</li>
+          <li>Bordes casi rectos (radio 0-2 px).</li>
+          <li>Sin sombras: la jerarquía se marca con color y fondos.</li>
+          <li>Fotos de ambiente con capa oscura bajo el texto blanco.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="componentes">
+  <div class="wrap">
+    <div class="sec-title"><h2>Componentes</h2><p>Piezas reutilizables de la interfaz.</p></div>
+
+    <h3 style="margin-bottom:var(--s2)">Botones</h3>
+    <div class="card-box" style="margin-bottom:var(--s5)">
+      <div class="row">
+        <button class="btn">Comprar ahora</button>
+        <button class="btn ghost">Ver detalles</button>
+        <button class="btn" disabled>Agotado</button>
+      </div>
+      <div class="dark row" style="margin-top:var(--s3)">
+        <button class="btn">Enviar mensaje</button>
+        <button class="btn light">Llamar: +0 (800) 423-754</button>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom:var(--s2)">Menú principal</h3>
+    <div class="menu" style="margin-bottom:var(--s5)" role="presentation">
+      <span>Departamentos</span><span>Inicio</span><span>Tienda</span><span>Tiendas</span><span>Blog</span><span>Contacto</span>
+    </div>
+
+    <h3 style="margin-bottom:var(--s2)">Tarjetas de producto</h3>
+    <div class="grid g3" style="margin-bottom:var(--s5)">
+      <div class="product">
+        <div class="img"><span class="tag sale">Oferta</span>Imagen 1:1</div>
+        <h3>Turbo Ottoman</h3>
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <div class="price"><s>79,90 $</s>78,00 $</div>
+      </div>
+      <div class="product">
+        <div class="img">Imagen 1:1</div>
+        <h3>Amortiguador Wallnut</h3>
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <div class="price">50,00 $</div>
+      </div>
+      <div class="product">
+        <div class="img"><span class="tag sold">Agotado</span>Imagen 1:1</div>
+        <h3>Cámara Yama</h3>
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <div class="price">100,00 $</div>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-bottom:var(--s5)">
+      <div>
+        <h3 style="margin-bottom:var(--s2)">Mis vehículos</h3>
+        <form class="form-vehicle" onsubmit="return false">
+          <h3>Mis vehículos</h3>
+          <select aria-label="Marca"><option>-- Marca --</option></select>
+          <select aria-label="Modelo" disabled><option>-- Modelo --</option></select>
+          <select aria-label="Año" disabled><option>-- Año --</option></select>
+          <button class="btn" type="submit">Buscar</button>
+        </form>
+      </div>
+      <div>
+        <h3 style="margin-bottom:var(--s2)">Cuenta atrás</h3>
+        <div class="dark">
+          <div class="count">
+            <div><b>78</b><span>Días</span></div>
+            <div><b>10</b><span>Horas</span></div>
+            <div><b>47</b><span>Minutos</span></div>
+            <div><b>05</b><span>Segundos</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom:var(--s2)">Franja de ventajas</h3>
+    <div class="card-box grid g3" style="margin-bottom:var(--s5)">
+      <div class="perk">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.5"/><circle cx="17" cy="17.5" r="1.5"/></svg>
+        <div><strong>Envío gratis</strong><span>A todo el mundo desde 27 $</span></div>
+      </div>
+      <div class="perk">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div><strong>100% genuino</strong><span>Solo piezas originales</span></div>
+      </div>
+      <div class="perk">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16v11H4zM4 8l3-4h10l3 4"/><path d="M9 13h6"/></svg>
+        <div><strong>Devolución fácil</strong><span>365 días para devolver</span></div>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom:var(--s2)">Tarjeta de blog</h3>
+    <div class="grid g3 blog">
+      <article>
+        <div class="img"></div>
+        <h3>Mejora tu E30 y E36 Serie 3</h3>
+        <div class="meta">Frenos · por apar</div>
+        <p style="font-size:14px;color:var(--color-text-muted);margin:8px 0">Qué cambiar primero para que un clásico de los 90 rinda como nuevo.</p>
+        <a href="#componentes">Leer más</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tokens">
+  <div class="wrap">
+    <div class="sec-title"><h2>Tokens CSS</h2><p>Copia estas variables como base del proyecto.</p></div>
+<pre>:root{
+  --color-primary:#FF5A2C;
+  --color-primary-dark:#E04A1E;
+  --color-secondary:#2B3042;
+  --color-accent:#FDC62F;
+  --color-bg-light:#F5F5F5;
+  --color-text:#222222;
+  --color-text-muted:#6B6B6B;
+  --font-heading:'Rajdhani', sans-serif;
+  --font-body:'Open Sans', sans-serif;
+  --container:1170px;
+  --s1:8px; --s2:16px; --s3:24px;
+  --s4:32px; --s5:48px; --s6:80px;
+}</pre>
+    <div class="grid g2" style="margin-top:var(--s4)">
+      <div class="card-box">
+        <h3 style="margin-bottom:var(--s1)">Tono de voz</h3>
+        <p class="note">Directo, técnico y cercano. Frases cortas con verbos de acción: "Encuentra tu pieza", "Compra ahora", "¿Necesitas consejo?". Sin texto de relleno; los mensajes deben transmitir confianza (garantía, envío, devoluciones).</p>
+      </div>
+      <div class="card-box">
+        <h3 style="margin-bottom:var(--s1)">Accesibilidad</h3>
+        <ul class="clean note">
+          <li>Contraste mínimo AA en texto.</li>
+          <li>Foco visible en todos los elementos interactivos.</li>
+          <li>Logos de marca en escala de grises, con color al pasar el ratón.</li>
+          <li>Respetar preferencia de movimiento reducido.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>APAR · Guía de estilos</footer>
+</body>
+</html>
