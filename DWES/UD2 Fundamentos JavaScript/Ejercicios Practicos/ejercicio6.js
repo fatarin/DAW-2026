@@ -1,24 +1,11 @@
-const serverResponse = {
-    status: 200,
-    ip: '192.168.1.45',
-    port: 8080,
-    token: 'A98F72-ZX',
-    sessionDuration: 3600,
-    userRole: 'Admin'
-  };
+//declarar funcion arrow que recibe varios argumentos con REST (...)
 
-  //extraccion mediante función arrow
-  const validarAcceso = ({ip, port, token}) =>{
-    return 'conectando a IP: ' +
-    ip +
-    ' por el puerto ' + 
-    port + 
-    ' con el token ' + 
-    token
-  };
+const prepararCafe = (tamaño, ...ingredientes)  => {
+    return console.log('Café ' + tamaño + 'con los siguientes extras: ' + ingredientes.join(', '));
+}
 
-  console.log(validarAcceso(serverResponse));
 
-  //Extracción directa
-  const {userRole} = serverResponse;
-  console.log(userRole);
+//prueba de ejecución con varios argumentos
+prepararCafe("Mediano", "Leche de Avena", "Vainilla", "Canela");
+prepararCafe("Pequeño", "chocolate");
+prepararCafe("Grande", "Vainilla", "Canela");
