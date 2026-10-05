@@ -1,0 +1,19 @@
+HITO 1: Check-in de Modelo de Datos y Planificación
+Fecha límite: 30 de Septiembre
+
+Objetivo: Tener lista la arquitectura de la base de datos y la organización inicial.
+
+¿Qué tienes que entregar/enseñar en el Hito 1?
+Diagrama Entidad-Relación (E/R):
+
+Diseñado con Draw.io o DBDiagram.io.
+
+Debe tener entre 4 y 6 entidades (tablas principales).
+
+Ejemplo si haces una web de reservas: Usuario, Restaurante, Reserva, Mesa, Opinion.
+
+Requisito obligatorio: Las relaciones muchos a muchos (M:N) deben estar resueltas con una tabla intermedia. (Ejemplo: Un Usuario se inscribe en muchos Eventos y un Evento tiene muchos Usuarios $\rightarrow$ Tabla intermedia Inscripcion).
+
+Tablero Kanban (Trello / GitHub Projects):
+
+Enseñar que estás usando el tablero para gestionar tus tareas y que está actualizado.

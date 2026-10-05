@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>PawLink – PawMate</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&amp;family=Nunito:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;border-radius:999px;background:#14575A;color:#fff;font-weight:800;border:0;font-size:16px;font-family:inherit}
+.btn:hover{background:#0F4446}
+.ph{background:#DCEBE8;color:#14575A;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px}
+.card{background:#fff;border-radius:20px;box-shadow:0 2px 14px rgba(20,60,60,.09);overflow:hidden}
+.bar{height:10px;border-radius:99px;background:#E7ECEA;overflow:hidden}
+.bar i{display:block;height:100%;background:#E8A317}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:2px solid #C9D6D3;background:#fff;font-family:inherit;font-weight:800;font-size:15px;color:#1D2B2A}
+.on{border-color:#14575A;background:#E6F1EF}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+</style>
+</helmet>
+<div style="font-family:'Nunito',sans-serif;background:#FAFAF6;color:#1D2B2A;font-size:17px;line-height:1.5">
+<div style="max-width:1200px;margin:0 auto;padding:0 32px 80px;box-sizing:border-box">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 0 0">
+<div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap"><a href="Main.dc.html" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:28px;color:#14575A;display:flex;align-items:center;gap:10px">
+<svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#14575A"></circle><g fill="#fff"><ellipse cx="11" cy="17" rx="2.8" ry="3.8" transform="rotate(-25 11 17)"></ellipse><ellipse cx="16.5" cy="11.5" rx="2.8" ry="3.8" transform="rotate(-8 16.5 11.5)"></ellipse><ellipse cx="23.5" cy="11.5" rx="2.8" ry="3.8" transform="rotate(8 23.5 11.5)"></ellipse><ellipse cx="29" cy="17" rx="2.8" ry="3.8" transform="rotate(25 29 17)"></ellipse></g><path d="M20 33C14 29 12 26 12 23.5 12 21.5 13.6 20 15.6 20 17.4 20 19 21 20 22.5 21 21 22.6 20 24.4 20 26.4 20 28 21.5 28 23.5 28 26 26 29 20 33Z" fill="#E8A317"></path></svg>
+Paw<span style="color:#B4472A">Link</span></a></div>
+<div style="display:flex;align-items:center;gap:20px"><a href="Entrar.dc.html" style="font-weight:800;color:#14575A">Entrar</a><a href="Registro.dc.html" style="font-weight:800;color:#14575A">Crear cuenta</a><a href="RegistroProtectora.dc.html" class="btn">Soy una protectora</a></div>
+</div>
+<div style="display:flex;justify-content:center;padding:18px 0 22px"><nav style="display:flex;gap:28px;font-weight:700;flex-wrap:wrap;justify-content:center;background:#DCEBE8;border-radius:999px;padding:12px 32px"><a href="Apadrinar.dc.html" style="color:#14575A;border-bottom:3px solid #E8A317;padding:4px 0">PawMate</a><a href="Tratamientos.dc.html" style="padding:4px 0">PawCare</a><a href="Regalos.dc.html" style="padding:4px 0">PawGift</a></nav></div>
+<h1 style="margin:28px 0 8px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:46px">Hazte PawMate de un peludo</h1>
+<p style="margin:0 0 24px;max-width:620px">Elige a quién acompañar cada mes. Como PawMate verás sus novedades y a dónde va tu aportación.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px"><button class="chip on">Todos</button><button class="chip">Perros</button><button class="chip">Gatos</button><button class="chip">Otros</button><button class="chip">Cerca de mí</button></div><div class="g"><a href="Mascota.dc.html" class="card"><div class="ph" style="height:210px">[Foto de Luna]</div><div style="padding:18px"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px">Luna</div><div style="font-size:14px;color:#3F5251;margin-bottom:12px">Perra · [Edad] · [Protectora], [Ciudad]</div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:14px;font-weight:800">[N] PawMates</span><span class="btn">Hazte PawMate</span></div></div></a><a href="Mascota.dc.html" class="card"><div class="ph" style="height:210px">[Foto de Nube]</div><div style="padding:18px"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px">Nube</div><div style="font-size:14px;color:#3F5251;margin-bottom:12px">Gata · [Edad] · [Protectora], [Ciudad]</div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:14px;font-weight:800">[N] PawMates</span><span class="btn">Hazte PawMate</span></div></div></a><a href="Mascota.dc.html" class="card"><div class="ph" style="height:210px">[Foto de Toby]</div><div style="padding:18px"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px">Toby</div><div style="font-size:14px;color:#3F5251;margin-bottom:12px">Perro · [Edad] · [Protectora], [Ciudad]</div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:14px;font-weight:800">[N] PawMates</span><span class="btn">Hazte PawMate</span></div></div></a><a href="Mascota.dc.html" class="card"><div class="ph" style="height:210px">[Foto de Mía]</div><div style="padding:18px"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px">Mía</div><div style="font-size:14px;color:#3F5251;margin-bottom:12px">Gata · [Edad] · [Protectora], [Ciudad]</div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:14px;font-weight:800">[N] PawMates</span><span class="btn">Hazte PawMate</span></div></div></a><a href="Mascota.dc.html" class="card"><div class="ph" style="height:210px">[Foto de Rocky]</div><div style="padding:18px"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px">Rocky</div><div style="font-size:14px;color:#3F5251;margin-bottom:12px">Perro · [Edad] · [Protectora], [Ciudad]</div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:14px;font-weight:800">[N] PawMates</span><span class="btn">Hazte PawMate</span></div></div></a><a href="Mascota.dc.html" class="card"><div class="ph" style="height:210px">[Foto de Kira]</div><div style="padding:18px"><div style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px">Kira</div><div style="font-size:14px;color:#3F5251;margin-bottom:12px">Perra · [Edad] · [Protectora], [Ciudad]</div><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span style="font-size:14px;font-weight:800">[N] PawMates</span><span class="btn">Hazte PawMate</span></div></div></a></div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1250}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
