@@ -1,0 +1,29 @@
+HITO 2: Design Review del Prototipo (UX/UI)
+Fecha límite: 7 de Octubre
+
+Objetivo: Tener preparado el prototipo funcional e interactivo en Figma/Penpot y evaluar el de un compañero.
+
+¿Qué tienes que entregar/enseñar en el Hito 2?
+Prototipo Interactivo en Figma / Penpot:
+
+No son solo fotos estáticas; debe ser un prototipo con botones clicables que permitan navegar entre pantallas.
+
+Diseño Responsive / Web: Pensado para móviles y adaptable a pantalla completa.
+
+Pantallas obligatorias:
+
+Registro / Login.
+
+Panel principal / Dashboard.
+
+Formulario para crear algo (ej. publicar un anuncio, hacer una reserva).
+
+Vista detallada (ej. ver la ficha del restaurante o del producto).
+
+Evaluación entre compañeros (Peer Review):
+
+Le prestarás tu prototipo a un/a compañero/a.
+
+Esa persona intentará completar un flujo completo (ej: registrarse y hacer una reserva) sin tu ayuda.
+
+Completará una lista de cotejo (checklist) indicando si la navegación es clara, si hay enlaces rotos o errores visuales.
