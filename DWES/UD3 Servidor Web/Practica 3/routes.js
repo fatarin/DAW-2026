@@ -1,0 +1,61 @@
+const fs = require('fs');
+
+const requestHandler = ((req, res) => {
+    const url = req.url;
+    const method = req.method;
+
+    //Tarea 2: ruta raiz - formulario entrada
+    if (url === '/'){
+        res.write('<html>');
+        res.write('<head><title>Enter Message</title></head>');
+        res.write('<body><form action="/create-user" method="POST"><input type="text" name="username"><button type="submit">Send</button></form></body>');
+        res.write('</html');
+        return res.end();
+     
+    };
+
+    //Tarea 3: Ruta de listado (/users)
+    if (url === '/users'){
+        res.write('<html>');
+        res.write('<head><title>Assignment 1</title></head>');
+        res.write('<body>');
+        res.write('<li>User 1</li>');
+        res.write('<li>User 2</li>');
+        res.write('</body>');
+        res.write('</html');
+        return res.end();
+     
+    };
+
+    //Tarea 4 Ruta de Procesamiento (/create-user) y Flujo Datos
+    if (url === '/create-user' && method === 'POST') {
+        const body = [];
+        req.on('data', (chunk) => {
+            console.log(chunk);
+            body.push(chunk);
+        });
+        req.on('end', () => {
+            const parsedBody = Buffer.concat(body).toString();
+            const message = parsedBody.split('=')[1];
+            console.log(message);
+            
+        });
+        
+    };
+
+    //Tarea 5 Rutas no encontradas (404/Fallback)
+    if(url !== '/' && url !== '/create-user' && url !== '/users'){
+        res.write('<html>');
+        res.write('<head><title>Error Message</title></head>');
+        res.write('<body><p>Error 404 - Page not Found!</p</body>');
+        res.write('</html');
+        return res.end();
+    }
+
+    res.statusCode = 302;
+    res.setHeader('Location','/');
+    return res.end();
+        
+});
+
+exports.handler = requestHandler;
