@@ -1,0 +1,23 @@
+FERROMAX
+
+Pagina catalogo de herramientas, materiales para obra
+
+menú navegación con opciones principales
+
+acceso rápido y destacado a catalogo
+
+fichas catálogo llamativas, con info importante (precio) claro
+
+proceso compra claro -> añadir cesta -> 
+
+cesta muestra numero artículos y precio - interesante para agilizar proceso
+
+cesta muestra claramente gestión de productos, unidades y pago
+
+propuesta, subir menú de categoría arriba, para que se vea lo primero antes del grid de productos, por si se quiere aplicar ese primer filtro, puede agilizar el proceso de búsqueda
+
+formulario de solicitud de proyecto muy claro y sencillo. Recomendación, tal vez incluir un campo Categoría?
+
+formulario registro claro y conciso
+
+mi cuenta: información clara pero escueta. Añadir favoritos?
