@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.addEventListener('load', () => {
+            document.getElementById("formulario").addEventListener('submit', (event) => {
+                let validar = confirm("Quieres enviar el formulario ?");
+
+                if (!validar) {
+                    event.preventDefault();
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <form action="https://www.marca.com" method="POST" id=formulario>
+        <input type="text">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

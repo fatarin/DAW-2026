@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.addEventListener('load', () => {
+            document.getElementById("formulario").addEventListener('input', () => {
+                
+                document.getElementById('texto2').value += document.getElementById('texto1').value.toUpperCase();
+                document.getElementById('texto1').value = "";
+
+               
+            });
+
+            document.getElementById("formulario").addEventListener('keyup', () => {
+                
+                document.getElementById('texto1').style.background="yellow";
+                               
+            });
+
+             document.getElementById("formulario").addEventListener('keydown', () => {
+                
+                document.getElementById('texto1').style.background="white";
+               
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <form action="https://www.marca.com" method="POST" id=formulario>
+        <input type="text" id="texto1">
+        <input type="text" id="texto2">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

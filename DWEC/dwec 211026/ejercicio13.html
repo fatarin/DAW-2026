@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.addEventListener('load', () => {
+            document.getElementById("texto").addEventListener('mousedown', () => {
+                
+                document.getElementById('texto').style.color="red";
+                
+
+               
+            });
+
+              document.getElementById("texto").addEventListener('mouseup', () => {
+                
+                document.getElementById('texto').style.color="green";
+                document.getElementById('texto').innerText ="Mouse over this text";
+
+               
+            });
+            
+        })
+    </script>
+</head>
+
+<body>
+    <p id="texto">Mouse over this text</p>
+</body>
+
+</html>

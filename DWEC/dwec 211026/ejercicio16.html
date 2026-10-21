@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.addEventListener('load', () => {
+            document.getElementById("texto").addEventListener('click', () => {
+                
+                document.getElementById('texto').style.color="red";
+               console.log("has pulsado el botón una vez");
+                
+
+               
+            });
+
+              document.getElementById("texto").addEventListener('dblclick', () => {
+                
+                document.getElementById('texto').style.color="green";
+                console.log ("has pulsado el botón dos veces");
+
+               
+            });
+
+           /*  document.getElementById("imagen1").addEventListener('mouseover', () => {
+                
+                document.getElementById('imagen1').style.height='200px';
+                
+
+               
+            });
+
+            document.getElementById("imagen1").addEventListener('mouseout', () => {
+                
+                document.getElementById('imagen1').style.height='20px';
+                               
+            }); */
+
+            //con this
+            document.getElementById("imagen1").addEventListener('mouseover', function() {
+                
+                this.style.height='200px';
+                
+
+               
+            });
+
+            document.getElementById("imagen1").addEventListener('mouseout', function() {
+                
+                this.style.height='20px';
+                               
+            });
+            
+        })
+    </script>
+</head>
+
+<body>
+    <p id="texto">Un click pasa a rojo, dos a verde</p>
+    <img src="pollito" id="imagen1" height="20px"></img>
+</body>
+
+</html>

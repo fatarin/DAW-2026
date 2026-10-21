@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.addEventListener('load', () => {
+            document.getElementById("texto").addEventListener('mouseover', () => {
+                
+                document.getElementById('texto').style.color="red";
+                document.getElementById('texto').innerText ="pasa a rojo";
+
+               
+            });
+
+              document.getElementById("texto").addEventListener('mouseout', () => {
+                
+                document.getElementById('texto').style.color="black";
+                document.getElementById('texto').innerText ="Mouse over this text";
+
+               
+            });
+            
+        })
+    </script>
+</head>
+
+<body>
+    <p id="texto">Mouse over this text</p>
+</body>
+
+</html>

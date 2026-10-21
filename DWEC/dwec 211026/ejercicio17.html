@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.addEventListener('load', () => {
+            
+           
+            let aux = 0;
+            document.getElementById("cuadrado").addEventListener('mousemove', function() {
+                aux ++;
+                document.getElementById('contador').innerHTML = aux;
+                
+
+               
+            });
+
+            document.getElementById("cuadrado").addEventListener('mouseout', function() {
+                
+                aux = 0;
+                document.getElementById('contador').innerHTML = aux;
+                
+                               
+            });
+            
+        })
+    </script>
+</head>
+
+<body>
+    <div id="cuadrado" style="height: 500px; width: 1000px; border: 1px solid black;"></div>
+    <p id="contador">0</p>
+    
+</body>
+
+</html>
