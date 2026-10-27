@@ -1,0 +1,301 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APAR - Tienda de repuestos para coches</title>
+</head>
+<body>
+
+    <header>
+        <section aria-label="Información de la tienda">
+            <p>Dirección: Box 565, Charlesstown, Nevis, West Indies</p>
+            <p>Moneda: USD</p>
+            <p>Idioma: Español</p>
+            <p>Teléfono: +0 (800) 423-754</p>
+        </section>
+
+        <a href="/" aria-label="APAR, página de inicio">
+            <img src="images/logo-apar.png" alt="Logotipo de APAR">
+        </a>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#departamentos">Shop Departments</a></li>
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#tienda">Shop</a></li>
+                <li><a href="#marcas">Store List</a></li>
+                <li><a href="#articulos">Blog</a></li>
+                <li><a href="#paginas">Pages</a></li>
+                <li><a href="#contacto">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio">
+
+        <section aria-labelledby="titulo-principal">
+            <h1 id="titulo-principal">Interior items for Lazang Class</h1>
+            <p>Encuentra accesorios y repuestos para tu vehículo.</p>
+            <a href="#tienda">Shop Now</a>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>My Vehicles</legend>
+
+                    <label for="marca-vehiculo">Marca</label>
+                    <select id="marca-vehiculo" name="marca">
+                        <option value="">Selecciona una marca</option>
+                    </select>
+
+                    <label for="modelo-vehiculo">Modelo</label>
+                    <select id="modelo-vehiculo" name="modelo">
+                        <option value="">Selecciona un modelo</option>
+                    </select>
+
+                    <label for="ano-vehiculo">Año</label>
+                    <select id="ano-vehiculo" name="ano">
+                        <option value="">Selecciona un año</option>
+                    </select>
+
+                    <button type="submit">Search</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section aria-label="Ventajas de la tienda">
+            <ul>
+                <li>
+                    <h2>Free Delivery</h2>
+                    <p>Envío gratuito desde 50 $.</p>
+                </li>
+                <li>
+                    <h2>100% Genuine</h2>
+                    <p>Piezas 100 % originales.</p>
+                </li>
+                <li>
+                    <h2>EZ Parts Returns</h2>
+                    <p>Devoluciones de piezas.</p>
+                </li>
+                <li>
+                    <h2>Loyal Customers</h2>
+                    <p>Más de 1000 artículos disponibles.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="departamentos" aria-label="Promociones">
+            <article>
+                <h2>Parts &amp; Assets</h2>
+                <p>Compra ruedas y accesorios.</p>
+                <a href="#tienda">Ver productos</a>
+            </article>
+
+            <article>
+                <h2>Flat 20% Off</h2>
+                <p>New Discover Engines</p>
+                <a href="#tienda">Shop Now</a>
+            </article>
+        </section>
+
+        <section id="marcas" aria-labelledby="titulo-marcas">
+            <h2 id="titulo-marcas">Choose Parts by Brand</h2>
+            <p>Encuentra repuestos según la marca.</p>
+
+            <ul>
+                <li><a href="#tienda">Viper</a></li>
+                <li><a href="#tienda">Sportcar</a></li>
+                <li><a href="#tienda">Alligator</a></li>
+                <li><a href="#tienda">Sportcar Racing</a></li>
+                <li><a href="#tienda">Automotive</a></li>
+                <li><a href="#tienda">Brant Car Concepts</a></li>
+                <li><a href="#tienda">GetEasyCar</a></li>
+                <li><a href="#tienda">Your Name</a></li>
+                <li><a href="#tienda">Company</a></li>
+                <li><a href="#tienda">Harris Autos</a></li>
+                <li><a href="#tienda">Speedauto</a></li>
+                <li><a href="#tienda">Auto Company</a></li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="titulo-clientes">
+            <h2 id="titulo-clientes">Strong Spending Customers</h2>
+            <p>Descubre nuestra actividad y experiencia.</p>
+            <dl>
+                <dt>Días</dt>
+                <dd>78</dd>
+                <dt>Horas</dt>
+                <dd>10</dd>
+                <dt>Minutos</dt>
+                <dd>47</dd>
+                <dt>Segundos</dt>
+                <dd>05</dd>
+            </dl>
+            <a href="#contacto">See Details</a>
+        </section>
+
+        <section id="tienda" aria-labelledby="titulo-productos">
+            <h2 id="titulo-productos">Productos</h2>
+
+            <nav aria-label="Categorías de productos">
+                <ul>
+                    <li><a href="#kits">Service Kits</a></li>
+                    <li><a href="#tendencias">Trending</a></li>
+                    <li><a href="#muebles">Furniture</a></li>
+                </ul>
+            </nav>
+
+            <section id="kits" aria-label="Productos destacados">
+                <ul>
+                    <li>
+                        <article>
+                            <img src="images/producto-turbo.jpg" alt="Turbo para automóvil">
+                            <h3>Ottoman Turno</h3>
+                            <p>Precio: 78 $</p>
+                            <a href="#contacto">Ver producto</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="images/producto-alternador.jpg" alt="Alternador para automóvil">
+                            <h3>Earphone Cas</h3>
+                            <p>Precio: 290,90 $</p>
+                            <a href="#contacto">Ver producto</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="images/producto-amortiguador.jpg" alt="Amortiguador con muelle">
+                            <h3>Wallnut Wall</h3>
+                            <p>Precio: 50,50 $</p>
+                            <a href="#contacto">Ver producto</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="images/producto-retrovisor.jpg" alt="Retrovisor de automóvil">
+                            <h3>Takata Blasss</h3>
+                            <p>Consulta el precio</p>
+                            <a href="#contacto">Ver producto</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="images/producto-aceite.jpg" alt="Aceite para motor">
+                            <h3>Auto Oil</h3>
+                            <p>Precio: 29 $</p>
+                            <a href="#contacto">Ver producto</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="images/producto-neumatico.jpg" alt="Neumático para automóvil">
+                            <h3>Horrison</h3>
+                            <p>Precio: 350,90 $</p>
+                            <a href="#contacto">Ver producto</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="images/producto-compresor.jpg" alt="Compresor para automóvil">
+                            <h3>Kime Turbo</h3>
+                            <p>Precio: 124,90 $</p>
+                            <a href="#contacto">Ver producto</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <img src="images/producto-camara.jpg" alt="Cámara para automóvil">
+                            <h3>Yama Camera</h3>
+                            <p>Consulta el precio</p>
+                            <a href="#contacto">Ver producto</a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section aria-labelledby="titulo-asesoramiento">
+            <h2 id="titulo-asesoramiento">Do You Want Advice?</h2>
+            <p>¿No encuentras lo que buscas? Ponte en contacto con nosotros.</p>
+            <a href="tel:+0800423754">Llamar por teléfono</a>
+            <a href="#contacto">Envíanos un mensaje</a>
+        </section>
+
+        <section id="articulos" aria-labelledby="titulo-articulos">
+            <h2 id="titulo-articulos">Tips on the Car</h2>
+
+            <article>
+                <img src="images/articulo-motor.jpg" alt="Motor de un automóvil">
+                <h3>New from BuyAutoParts: Magnetic</h3>
+                <p>Air conditioning - by APAR</p>
+                <p>Consejos y novedades sobre piezas y mantenimiento de vehículos.</p>
+                <a href="#articulo-motor">Read More</a>
+            </article>
+
+            <article>
+                <img src="images/articulo-repuestos.jpg" alt="Persona revisando piezas de automóvil">
+                <h3>Upgrade for the E30 and E36 3 Series</h3>
+                <p>Auto parts, bikes - by APAR</p>
+                <p>Información sobre mejoras y repuestos para vehículos.</p>
+                <a href="#articulo-repuestos">Read More</a>
+            </article>
+
+            <article>
+                <img src="images/articulo-taller.jpg" alt="Mecánico reparando un automóvil">
+                <h3>Fix Your Ride, Protect the Environment</h3>
+                <p>Car talk, car fun, car news - by APAR</p>
+                <p>Recomendaciones para cuidar tu coche y el medioambiente.</p>
+                <a href="#articulo-taller">Read More</a>
+            </article>
+        </section>
+
+    </main>
+
+    <footer id="contacto">
+        <nav aria-label="Ayuda y soporte">
+            <h2>Help &amp; Support</h2>
+            <ul>
+                <li><a href="#wishlist">Wishlist</a></li>
+                <li><a href="#cuenta">My Account</a></li>
+                <li><a href="#tienda">Store Locator</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Servicio al cliente">
+            <h2>Customer Service</h2>
+            <ul>
+                <li><a href="#soporte">Support Center</a></li>
+                <li><a href="#pedidos">Returns</a></li>
+                <li><a href="#envios">Shipping</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <nav aria-label="Información de la empresa">
+            <h2>About Us</h2>
+            <ul>
+                <li><a href="#empresa">About Us</a></li>
+                <li><a href="#contacto">Contact Us</a></li>
+                <li><a href="#blog">Recent Blog</a></li>
+                <li><a href="#tienda">Shopping</a></li>
+            </ul>
+        </nav>
+
+        <section aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Contact</h2>
+            <address>
+                <p>Box 565, Charlesstown, Nevis, West Indies</p>
+                <p><a href="tel:+0800423754">+0 (800) 423-754</a></p>
+                <p><a href="mailto:help@apar.com">help@apar.com</a></p>
+            </address>
+        </section>
+
+        <p>Copyright © 2020 APAR. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
