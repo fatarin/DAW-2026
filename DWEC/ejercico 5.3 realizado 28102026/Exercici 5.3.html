@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Exercici 4.3</title>
+<script type="text/javascript">
+
+function addFirstPosition(element, text) {
+    element.innerHTML += "<li>" + text + "</li>";
+}
+
+function addPositionX(text, position) {
+        //obtener listado elementos li        
+        let listaLi = Array.from(document.querySelectorAll("li"));
+        console.log(listaLi);
+    
+        //crear nuevo elemento
+        let nuevoLi = document.createElement('li');
+        let nuevoTexto = document.createTextNode(text);
+        nuevoLi.appendChild(nuevoTexto);
+        //insertar elemento nuevo en posición indicada
+        document.getElementById('list').insertBefore(nuevoLi, listaLi[parseInt(position) - 1]);
+
+
+}
+
+function replacePositionX(posicion) {
+    let listadoLi = Array.from(document.querySelectorAll("li"));
+        //eliminiar posicion recibida
+        document.getElementById('list').removeChild(listadoLi[parseInt(posicion) -1]);
+}
+
+function removePositionX(entrada, posicion) {
+        //obtener lista LI
+        let listaLi = Array.from(document.querySelectorAll("li"));
+        console.log(listaLi);
+
+        //crear nuevo elemento
+        let nuevoLi = document.createElement('li');
+        let nuevoTexto = document.createTextNode(entrada);
+        nuevoLi.appendChild(nuevoTexto);
+        //reemplazar
+        document.getElementById('list').replaceChild(nuevoLi, listaLi[parseInt(posicion) - 1]);
+}
+
+function empty() {	
+		        document.getElementById('list').innerHTML = "";
+
+}
+
+function clonar(posicion){
+           let listaLi = Array.from(document.querySelectorAll("li"));
+           let nuevoLi = listaLi[parseInt(posicion) - 1].cloneNode(true);
+           document.getElementById('list').appendChild(nuevoLi);
+}
+
+function trash(id){
+    console.log(id);
+}
+
+window.onload = ()=> {
+
+
+    //boton 1
+    let boton1 = document.getElementById("boton1");
+    boton1.addEventListener('click', () => {
+        //seleccionamos la lista
+        let lista = document.getElementById("list");
+
+        //pedimos texto a usuario
+        let entrada = prompt("Texto a introducir");
+
+        // LLAMADA A FUNCION
+        addFirstPosition(lista, entrada);
+    });
+
+
+    //boton 2
+    //asignar evento al boton
+    let boton2 = document.getElementById("boton2");
+    boton2.addEventListener('click', () => {
+        
+        //pedimos texto y posicion a usuario
+        let entrada = prompt("Texto a introducir");
+        let posicion = prompt("Posición a introducir");
+
+        // LLAMADA A FUNCION
+        addPositionX(entrada, posicion);
+    });
+
+
+    //boton 3
+    //asignar evento al boton
+    let boton3 = document.getElementById("boton3");
+    boton3.addEventListener('click', () => {
+        let posicion = prompt("Posición a eliminar");
+             
+        replacePositionX(posicion);
+    });
+
+
+    //boton4
+    //asignar evento al boton
+    let boton4 = document.getElementById("boton4");
+    boton4.addEventListener('click', () => {
+        
+        //pedimos texto y posicion a usuario
+        let entrada = prompt("Texto a introducir");
+        let posicion = prompt("Posición a sustituir");
+
+        
+        //pasar a funcion
+        removePositionX(entrada, posicion);
+
+    });
+
+    
+
+    //boton 5
+    let boton5 = document.getElementById("boton5");
+    boton5.addEventListener('click', () => {
+            empty();
+                   
+    });
+
+    //boton 6
+    let boton6 = document.getElementById("boton6");
+    boton6.addEventListener('click', () => {
+           let posicion = prompt("Posición a clonar");
+           clonar(posicion);
+                   
+    });
+
+
+    //boton 7
+    let boton7 = document.getElementById("boton7");
+    boton7.addEventListener('click', () => {
+           let posicion = prompt("Posición a mover");
+           let listaLi = Array.from(document.querySelectorAll("li"));
+           document.getElementById('list').appendChild(listaLi[parseInt(posicion) - 1]);
+                   
+    });
+
+    let listaImg = Array.from(document.querySelectorAll('img'));
+    listaImg.forEach( element => {
+        element.addEventListener('click', () => {
+            element.parentNode.remove();
+        });
+    });
+    
+
+
+
+    /* document.getElementById("img1").addEventListener('click', () => {
+            let listaLi = document.querySelectorAll('li');
+            let boton = document.getElementById("img1");
+            let posicion = boton.parentElement;
+            document.getElementById('list').removeChild(posicion);
+    }) */
+
+
+};
+</script>
+</head>
+<body>
+<div>
+<ol id="list">
+<li>Lorem ipsum dolor sit amet<img id="img1" src="./borrar.png" height="20px" width="20px"></li>
+<li>Consectetuer adipiscing elit<img id="img2" src="./borrar.png" height="20px" width="20px"></li>
+<li>Sed mattis enim vitae orci<img id="img3" src="./borrar.png" height="20px" width="20px"></li>
+<li>Phasellus libero<img id="img4" src="./borrar.png" height="20px" width="20px"></li>
+<li>Maecenas nisl arcu<img id="img5" src="./borrar.png" height="20px" width="20px"></li>
+</ol>
+</div>
+<input type="button" value="Afegir element ultima posici�" id="boton1">
+<input type="button" value="Afegir element en posici� x" id="boton2">
+<input type="button" value="Eliminar element de la posici�" id="boton3">
+<input type="button" value="Substituir element de la posici� x" id="boton4">
+<input type="button" value="Buidar llista" id="boton5">
+<input type="button" value="Clonar elemento" id="boton6">
+<input type="button" value="Mover elemento" id="boton7">
+</body>
+</html>
