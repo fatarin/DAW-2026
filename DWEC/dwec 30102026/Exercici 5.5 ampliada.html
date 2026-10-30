@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+		<script>
+			window.onload = () => {
+
+          function makeTable(){
+            let filas = parseInt(prompt("Dime número de filas"));
+            let columnas = parseInt(prompt("Dime número de columnas"));
+			document.getElementById('EliminarFila').removeAttribute('disabled');
+			document.getElementById('EliminarColumna').removeAttribute('disabled');
+			 // Crear tabla
+			 let tabla = "<table border='1'>";
+
+			  for (let i = 0; i < filas; i++) {
+				  tabla += "<tr>";
+
+				  for (let j = 0; j < columnas; j++) {
+					  tabla += `<td> ${j}</td>`;
+				  }
+
+				  tabla += "</tr>";
+			  }
+
+			  tabla += "</table>";
+
+			  document.getElementById('tabla').innerHTML = tabla;
+
+            
+          }
+
+		  function removeRow(){
+				let numFila = prompt("Dime fila a eliminar");
+				let listaFilas = Array.from(document.querySelectorAll('tr'));
+				let filaBorrar = document.getElementsByTagName('tbody');
+				console.log(filaBorrar);
+				//filaBorrar.removeChild(listaFilas[parseInt(numFila) - 1]);
+				listaFilas[parseInt(numFila) - 1].remove();
+
+		  }
+
+		  function removeCol(){
+				let numCol = prompt("Dime columna a eliminar");
+				let listaFilas = Array.from(document.querySelectorAll('tr'));
+				listaFilas.forEach(element => {
+					let listaCol = Array.from(element.children);
+					console.log(listaCol);
+					listaCol[parseInt(numCol) - 1].remove();
+				})
+		  }
+
+          document.getElementById('CrearTabla').addEventListener('click', () => {
+				makeTable();
+		  });
+
+		  document.getElementById('EliminarFila').addEventListener('click', () => {
+				removeRow();
+		  });
+
+		  document.getElementById('EliminarColumna').addEventListener('click', () => {
+				removeCol();
+		  });
+        }
+		</script>
+		<input type="button" id="CrearTabla" value="Crear Tabla" >
+		<input type="button" id="EliminarFila" disabled="disabled" value="Eliminar fila" >
+		<input type="button" id="EliminarColumna" disabled="disabled" value="Eliminar columna" >
+		<table style="border: solid 1px red;" id="tabla">
+
+		</table>
+	</body>
+</html>

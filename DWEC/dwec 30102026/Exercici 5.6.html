@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = () => {
+				function asignaBorrar(){
+				let listaImg = Array.from(document.querySelectorAll('a'));
+				//console.log(listaImg);
+				listaImg.forEach( element => {
+       				element.addEventListener('click', () => {
+					//console.log("pulsado <a>");
+            		element.closest('tr').remove();
+					
+					 });
+				});
+				};	
+
+
+
+				document.getElementById('addEmpButton').addEventListener('click', () => {
+					let lista = Array.from(document.querySelectorAll('tr'));
+					let nombre = document.getElementById('name').value;
+					//console.log(nombre);
+					let correo = document.getElementById('email').value;
+					//console.log(correo);
+					let salario = document.getElementById('salary').value;
+					//console.log(salario);
+					
+					//console.log(lista);
+					
+					//añadimos la nueva lista
+					document.getElementById('employeetable').firstElementChild.innerHTML += `<tr><td>${nombre}</td><td>${correo}</td><td>${salario}</td><td><a href="#">Delete</a></td></tr>`;
+					//asignamos funciona a enlaces, al hacer el anterior innerhtml se pierden los que tuviera
+					asignaBorrar();
+				});
+
+				
+				
+			};
+        </script>>
+	</head>
+	<body>		
+		<center>
+			<br> <br>  Agregar nuevo empleado <br><br> name: <input type="text"
+				name="name" id="name"/>&nbsp;&nbsp; email: <input type="text" name="email" id="email" />
+				&nbsp;&nbsp; 	salary: <input type="text" name="salary" id="salary" value=""/> <br> <br>
+				<button id="addEmpButton">Submit</button>
+			<br> <br>
+			<hr>
+			<br> <br>
+			
+			<table id="employeetable" border="1" cellpadding="5" cellspacing="">
+				<tbody>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Salary</th>
+						<th>&nbsp;</th>
+					</tr>
+					<tr>
+						<td>Tom</td>
+						<td>[email protected].com</td>
+						<td>5000</td>
+						<td><a href="#">Delete</a></td>
+					</tr>
+					<tr>
+						<td>Jerry</td>
+						<td>[email protected].com</td>
+						<td>8000</td>
+						<td><a href="#">Delete</a></td>
+					</tr>
+					<tr>
+						<td>Bob</td>
+						<td>[email protected].com</td>
+						<td>10000</td>
+						<td><a href="#">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</center>
+	</body>
+</html>
+
+
